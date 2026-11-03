@@ -36,8 +36,10 @@ body{margin:0;background:#F5F7F6;font-family:'Manrope',system-ui,sans-serif}
 #pg-home .faq-q{all:unset;box-sizing:border-box;cursor:pointer;width:100%;display:flex;justify-content:space-between;align-items:center;gap:16px;padding:22px 24px;font-weight:700;font-size:17px;color:#102A26}
 #pg-home .faq-q:focus-visible{outline:3px solid rgba(11,122,94,.35)}
 #pg-home .prow:nth-child(even){background:#F5F7F6}
+#pg-home .menu-panel{max-height:calc(100vh - 80px);max-height:calc(100dvh - 80px);overflow-y:auto;overscroll-behavior:contain;-webkit-overflow-scrolling:touch}
 #pg-home .only-mob{display:none}
-@media (max-width:900px){#pg-home .only-desk{display:none !important}
+@media (max-width:900px){#pg-home .menu-panel{max-height:calc(100vh - 156px);max-height:calc(100dvh - 156px)}
+#pg-home .only-desk{display:none !important}
 #pg-home .only-mob{display:flex}
 #pg-home .mbar{display:flex !important}
 #pg-home .pad-b{padding-bottom:84px}}
@@ -89,8 +91,10 @@ body{margin:0;background:#F5F7F6;font-family:'Manrope',system-ui,sans-serif}
 #pg-service .ec summary::after{content:"+";font-size:22px;line-height:1;color:#0B7A5E}
 #pg-service .ec details[open] summary::after{content:"–"}
 #pg-service .ec details p{padding:0 22px 18px;margin:0}
+#pg-service .menu-panel{max-height:calc(100vh - 80px);max-height:calc(100dvh - 80px);overflow-y:auto;overscroll-behavior:contain;-webkit-overflow-scrolling:touch}
 #pg-service .only-mob{display:none}
-@media (max-width:900px){#pg-service .only-desk{display:none !important}
+@media (max-width:900px){#pg-service .menu-panel{max-height:calc(100vh - 156px);max-height:calc(100dvh - 156px)}
+#pg-service .only-desk{display:none !important}
 #pg-service .only-mob{display:flex}
 #pg-service .mbar{display:flex !important}
 #pg-service .pad-b{padding-bottom:84px}
@@ -136,8 +140,10 @@ body{margin:0;background:#F5F7F6;font-family:'Manrope',system-ui,sans-serif}
 #pg-price .ec details[open] summary::after{content:"–"}
 #pg-price .ec .dbody{padding:0 22px 18px}
 #pg-price .ec .sub{font-weight:700;color:#102A26;margin:6px 0 8px}
+#pg-price .menu-panel{max-height:calc(100vh - 80px);max-height:calc(100dvh - 80px);overflow-y:auto;overscroll-behavior:contain;-webkit-overflow-scrolling:touch}
 #pg-price .only-mob{display:none}
-@media (max-width:900px){#pg-price .only-desk{display:none !important}
+@media (max-width:900px){#pg-price .menu-panel{max-height:calc(100vh - 156px);max-height:calc(100dvh - 156px)}
+#pg-price .only-desk{display:none !important}
 #pg-price .only-mob{display:flex}
 #pg-price .mbar{display:flex !important}
 #pg-price .pad-b{padding-bottom:84px}}
@@ -175,8 +181,10 @@ body{margin:0;background:#F5F7F6;font-family:'Manrope',system-ui,sans-serif}
 #pg-about .ec .card p:last-child,#pg-about .ec .card ul:last-child{margin-bottom:0}
 #pg-about .ec .invite{background:#102A26;color:#E4EEEA;border-radius:22px;padding:28px}
 #pg-about .ec .invite h3{font-family:'Unbounded','Manrope',sans-serif;font-size:20px;color:#fff;margin:0 0 12px}
+#pg-about .menu-panel{max-height:calc(100vh - 80px);max-height:calc(100dvh - 80px);overflow-y:auto;overscroll-behavior:contain;-webkit-overflow-scrolling:touch}
 #pg-about .only-mob{display:none}
-@media (max-width:900px){#pg-about .only-desk{display:none !important}
+@media (max-width:900px){#pg-about .menu-panel{max-height:calc(100vh - 156px);max-height:calc(100dvh - 156px)}
+#pg-about .only-desk{display:none !important}
 #pg-about .only-mob{display:flex}
 #pg-about .mbar{display:flex !important}
 #pg-about .pad-b{padding-bottom:84px}
@@ -200,8 +208,10 @@ body{margin:0;background:#F5F7F6;font-family:'Manrope',system-ui,sans-serif}
 #pg-contacts a.ccard:hover{border-color:#0B7A5E}
 #pg-contacts .inp{font:inherit;font-size:16px;padding:0 16px;height:52px;border-radius:12px;border:1.5px solid #C5D3CE;background:#fff;color:#102A26;box-sizing:border-box;width:100%}
 #pg-contacts .inp:focus{outline:3px solid rgba(11,122,94,.25);border-color:#0B7A5E}
+#pg-contacts .menu-panel{max-height:calc(100vh - 80px);max-height:calc(100dvh - 80px);overflow-y:auto;overscroll-behavior:contain;-webkit-overflow-scrolling:touch}
 #pg-contacts .only-mob{display:none}
-@media (max-width:900px){#pg-contacts .only-desk{display:none !important}
+@media (max-width:900px){#pg-contacts .menu-panel{max-height:calc(100vh - 156px);max-height:calc(100dvh - 156px)}
+#pg-contacts .only-desk{display:none !important}
 #pg-contacts .only-mob{display:flex}
 #pg-contacts .mbar{display:flex !important}
 #pg-contacts .pad-b{padding-bottom:84px}}
@@ -263,7 +273,7 @@ body{margin:0;background:#F5F7F6;font-family:'Manrope',system-ui,sans-serif}
   </div>
 
   <sc-if value="{{ menuOpen }}" hint-placeholder-val="{{ false }}">
-    <div style="border-top: 1px solid #DCE5E1; background: #fff; box-shadow: 0 24px 40px -24px rgba(16,42,38,.35)">
+    <div class="menu-panel" style="border-top: 1px solid #DCE5E1; background: #fff; box-shadow: 0 24px 40px -24px rgba(16,42,38,.35)">
       <div style="max-width: 1240px; margin: 0 auto; padding: 28px 24px 32px">
         <div class="only-mob" style="flex-wrap: wrap; gap: 10px 22px; margin-bottom: 22px; font-size: 16px">
           <a class="nlink" href="https://clean.lviv.ua/about/">Про нас</a>
@@ -631,7 +641,7 @@ body{margin:0;background:#F5F7F6;font-family:'Manrope',system-ui,sans-serif}
     </div>
   </div>
   <sc-if value="{{ menuOpen }}" hint-placeholder-val="{{ false }}">
-    <div style="border-top: 1px solid #DCE5E1; background: #fff; box-shadow: 0 24px 40px -24px rgba(16,42,38,.35)">
+    <div class="menu-panel" style="border-top: 1px solid #DCE5E1; background: #fff; box-shadow: 0 24px 40px -24px rgba(16,42,38,.35)">
       <div style="max-width: 1240px; margin: 0 auto; padding: 28px 24px 32px">
         <div class="only-mob" style="flex-wrap: wrap; gap: 10px 22px; margin-bottom: 22px; font-size: 16px">
           <a class="nlink" href="https://clean.lviv.ua/about/">Про нас</a><a class="nlink" href="https://clean.lviv.ua/price/">Ціни</a><a class="nlink" href="https://clean.lviv.ua/kontakty/">Контакти</a><a class="nlink" href="tel:0977417110">+38 (097) 741-71-10</a>
@@ -873,7 +883,7 @@ body{margin:0;background:#F5F7F6;font-family:'Manrope',system-ui,sans-serif}
     </div>
   </div>
   <sc-if value="{{ menuOpen }}" hint-placeholder-val="{{ false }}">
-    <div style="border-top: 1px solid #DCE5E1; background: #fff; box-shadow: 0 24px 40px -24px rgba(16,42,38,.35)">
+    <div class="menu-panel" style="border-top: 1px solid #DCE5E1; background: #fff; box-shadow: 0 24px 40px -24px rgba(16,42,38,.35)">
       <div style="max-width: 1240px; margin: 0 auto; padding: 28px 24px 32px">
         <div class="only-mob" style="flex-wrap: wrap; gap: 10px 22px; margin-bottom: 22px; font-size: 16px"><a class="nlink" href="https://clean.lviv.ua/about/">Про нас</a><a class="nlink" href="https://clean.lviv.ua/price/">Ціни</a><a class="nlink" href="https://clean.lviv.ua/kontakty/">Контакти</a><a class="nlink" href="tel:0977417110">+38 (097) 741-71-10</a></div>
         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 24px 32px">
@@ -1058,7 +1068,7 @@ body{margin:0;background:#F5F7F6;font-family:'Manrope',system-ui,sans-serif}
     </div>
   </div>
   <sc-if value="{{ menuOpen }}" hint-placeholder-val="{{ false }}">
-    <div style="border-top: 1px solid #DCE5E1; background: #fff; box-shadow: 0 24px 40px -24px rgba(16,42,38,.35)">
+    <div class="menu-panel" style="border-top: 1px solid #DCE5E1; background: #fff; box-shadow: 0 24px 40px -24px rgba(16,42,38,.35)">
       <div style="max-width: 1240px; margin: 0 auto; padding: 28px 24px 32px">
         <div class="only-mob" style="flex-wrap: wrap; gap: 10px 22px; margin-bottom: 22px; font-size: 16px"><a class="nlink" href="https://clean.lviv.ua/about/">Про нас</a><a class="nlink" href="https://clean.lviv.ua/price/">Ціни</a><a class="nlink" href="https://clean.lviv.ua/kontakty/">Контакти</a><a class="nlink" href="tel:0977417110">+38 (097) 741-71-10</a></div>
         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 24px 32px">
@@ -1232,7 +1242,7 @@ body{margin:0;background:#F5F7F6;font-family:'Manrope',system-ui,sans-serif}
     </div>
   </div>
   <sc-if value="{{ menuOpen }}" hint-placeholder-val="{{ false }}">
-    <div style="border-top: 1px solid #DCE5E1; background: #fff; box-shadow: 0 24px 40px -24px rgba(16,42,38,.35)">
+    <div class="menu-panel" style="border-top: 1px solid #DCE5E1; background: #fff; box-shadow: 0 24px 40px -24px rgba(16,42,38,.35)">
       <div style="max-width: 1240px; margin: 0 auto; padding: 28px 24px 32px">
         <div class="only-mob" style="flex-wrap: wrap; gap: 10px 22px; margin-bottom: 22px; font-size: 16px"><a class="nlink" href="https://clean.lviv.ua/about/">Про нас</a><a class="nlink" href="https://clean.lviv.ua/price/">Ціни</a><a class="nlink" href="https://clean.lviv.ua/kontakty/">Контакти</a><a class="nlink" href="tel:0977417110">+38 (097) 741-71-10</a></div>
         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 24px 32px">
@@ -1529,7 +1539,14 @@ class Component extends DCLogic {
     const modal = S.modal || { title: '', button: '', name: '', plan: '' };
     return {
       menuOpen: S.menuOpen,
-      toggleMenu: () => this.setState({ menuOpen: !S.menuOpen }),
+      toggleMenu: () => {
+        const opening = !S.menuOpen;
+        this.setState({ menuOpen: opening });
+        if (opening && window.innerWidth <= 900) {
+          const hd = document.querySelector('header');
+          if (hd) window.scrollTo(0, window.scrollY + hd.getBoundingClientRect().top);
+        }
+      },
       openPrice: () => this.open('price'),
       openCallback: () => this.open('callback'),
       openConsult: () => this.open('consult'),
@@ -1631,7 +1648,14 @@ class Component extends DCLogic {
     const prevent = (e) => { if (e && e.preventDefault) e.preventDefault(); };
     return {
       menuOpen: S.menuOpen, menu: menu, side: side,
-      toggleMenu: () => this.setState({ menuOpen: !S.menuOpen }),
+      toggleMenu: () => {
+        const opening = !S.menuOpen;
+        this.setState({ menuOpen: opening });
+        if (opening && window.innerWidth <= 900) {
+          const hd = document.querySelector('header');
+          if (hd) window.scrollTo(0, window.scrollY + hd.getBoundingClientRect().top);
+        }
+      },
       openPrice: () => this.open('price', 'Прибирання квартир'),
       openCallback: () => this.open('callback'),
       closeModal: () => this.setState({ modal: null }),
@@ -1778,7 +1802,14 @@ class Component extends DCLogic {
     const prevent = (e) => { if (e && e.preventDefault) e.preventDefault(); };
     return {
       menuOpen: S.menuOpen, menu: menu, side: side, sections: sections, works: works,
-      toggleMenu: () => this.setState({ menuOpen: !S.menuOpen }),
+      toggleMenu: () => {
+        const opening = !S.menuOpen;
+        this.setState({ menuOpen: opening });
+        if (opening && window.innerWidth <= 900) {
+          const hd = document.querySelector('header');
+          if (hd) window.scrollTo(0, window.scrollY + hd.getBoundingClientRect().top);
+        }
+      },
       openPrice: () => this.open('price'),
       openCallback: () => this.open('callback'),
       closeModal: () => this.setState({ modal: null }),
@@ -1833,7 +1864,14 @@ class Component extends DCLogic {
     const prevent = (e) => { if (e && e.preventDefault) e.preventDefault(); };
     return {
       menuOpen: S.menuOpen, menu: menu, side: side,
-      toggleMenu: () => this.setState({ menuOpen: !S.menuOpen }),
+      toggleMenu: () => {
+        const opening = !S.menuOpen;
+        this.setState({ menuOpen: opening });
+        if (opening && window.innerWidth <= 900) {
+          const hd = document.querySelector('header');
+          if (hd) window.scrollTo(0, window.scrollY + hd.getBoundingClientRect().top);
+        }
+      },
       openPrice: () => this.open('price'),
       openConsult: () => this.open('consult'),
       openCallback: () => this.open('callback'),
@@ -1888,7 +1926,14 @@ class Component extends DCLogic {
     const prevent = (e) => { if (e && e.preventDefault) e.preventDefault(); };
     return {
       menuOpen: S.menuOpen, menu: menu, side: side,
-      toggleMenu: () => this.setState({ menuOpen: !S.menuOpen }),
+      toggleMenu: () => {
+        const opening = !S.menuOpen;
+        this.setState({ menuOpen: opening });
+        if (opening && window.innerWidth <= 900) {
+          const hd = document.querySelector('header');
+          if (hd) window.scrollTo(0, window.scrollY + hd.getBoundingClientRect().top);
+        }
+      },
       openPrice: () => this.open('price'),
       openCallback: () => this.open('callback'),
       closeModal: () => this.setState({ modal: null }),
@@ -1913,4 +1958,3 @@ render(true);
 </script>
 </body>
 </html>
-"# prez" 
